@@ -8,3 +8,6 @@ solution.*
 # Excel files create temp files.
 ~$*
 */~$*
+
+# Old R Files used as starting point for assignments
+*.R

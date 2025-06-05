@@ -37,6 +37,7 @@
 		- `min`, `max`, `mean`, `std`, `median`, `percentile`
 	- Properties
 		- `size`, `shape`, `ndim`, `dtype`
+
 ## Chapter 3: Pandas
 
 Built on top of numpy.
@@ -96,8 +97,14 @@ Built on top of numpy.
 		- planets.groupby('method')['year'].describe().unstack()
 	- pivoting is a fast way of grouping by multiple columns
 		- `titanic.pivot_table('survived', index=[]'sex','age'], columns='class')`
-	- 
+- Pivot Tables
+	- `pivot_table` allows for multi-dimensional grouping
+	- `pivot_table('value', index=['col1', 'col2'], columns='col3')`
+	- `aggfunc` allows for multiple functions to be applied
+		- `aggfunc=['mean', 'std']`
+	- `fill_value` allows for filling in missing values
+	- `margins=True` adds a total row/column
+	- Example:
+	- `titanic.pivot_table('survived', index='sex', columns='class')`
 
 
-
-https://jakevdp.github.io/PythonDataScienceHandbook/03.08-aggregation-and-grouping.html
